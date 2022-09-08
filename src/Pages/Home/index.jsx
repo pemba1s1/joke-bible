@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../Components/Button';
 import ArrowDown from '../../assets/assets_Homework_Front-End_01/path-copy-7.png';
+import { Tags } from '../../Components/Tags';
 
 const Home = () => {
   const colors = [
@@ -24,6 +25,9 @@ const Home = () => {
             View All<img src={ArrowDown} alt="down"></img>
           </div>
         </Button>
+      </div>
+      <div className="joke-list">
+        <Tags label="Social Jokes" />
       </div>
     </div>
   );

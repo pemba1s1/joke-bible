@@ -151,8 +151,7 @@
 .home {
   width: 84%;
   margin: 0 auto;
-  border: 1px solid;
-  height: 100px; }
+  border: 1px solid; }
 
 .btn-category {
   width: 206px;
@@ -184,5 +183,17 @@
   align-items: center; }
   .flex img {
     margin-bottom: 3px; }
+
+.tag {
+  border-radius: 20px;
+  font-size: 12px;
+  width: auto;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-weight: 600; }
+
+.joke-list {
+  margin-top: 30px;
+  display: flex; }
 
 /*# sourceMappingURL=index.css.map */
