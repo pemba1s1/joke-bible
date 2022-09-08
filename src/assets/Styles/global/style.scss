@@ -1,0 +1,81 @@
+$white-two: #ffffff;
+$white: #f9f9f9;
+$weird-green: #57e690;
+$pastel-orange: #ff915b;
+$pale-orange: #ffbe5b;
+$kiwi-green: #8fe360;
+$light-gold: #ffdf5b;
+$br: #cfb995;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../Montserrat/Montserrat-Regular.ttf);
+}
+* {
+  font-family: Montserrat;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navcontainer {
+  background-color: #303030;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.navmenu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin: 0px 64px 0px 0px;
+}
+.navmenuitem {
+  width: auto;
+  padding: 20px 32px 21px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  color: $white-two;
+  &:hover {
+    background-color: $br;
+  }
+}
+.icon {
+  margin: 0 5px;
+}
+.dropdown {
+  position: relative;
+  .dropbtn {
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content .submenuitems {
+    display: flex;
+    color: black;
+    padding: 12px 16px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #5e5e53;
+    border-bottom: 1px solid;
+    background-color: $white-two;
+  }
+  &:hover .dropdown-content {
+    display: block;
+  }
+}
