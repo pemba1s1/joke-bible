@@ -6,6 +6,8 @@ $pale-orange: #ffbe5b;
 $kiwi-green: #8fe360;
 $light-gold: #ffdf5b;
 $br: #cfb995;
+$red: #ff5b5b;
+$blue: #57dbe6;
 
 @font-face {
   font-family: Montserrat;
@@ -15,6 +17,28 @@ $br: #cfb995;
   font-family: Montserrat;
   box-sizing: border-box;
   margin: 0;
+}
+
+.bg-red {
+  background-color: $red;
+}
+.bg-paleorange {
+  background-color: $pale-orange;
+}
+.bg-pastelorange {
+  background-color: $pastel-orange;
+}
+.bg-lightgold {
+  background-color: $light-gold;
+}
+.bg-kiwigreen {
+  background-color: $kiwi-green;
+}
+.bg-weirdgreen {
+  background-color: $weird-green;
+}
+.bg-blue {
+  background-color: $blue;
 }
 
 .navcontainer {
@@ -151,5 +175,48 @@ $br: #cfb995;
     img {
       margin-left: 5px;
     }
+  }
+}
+
+.home {
+  width: 84%;
+  margin: 0 auto;
+  border: 1px solid;
+  height: 100px;
+}
+
+.btn-category {
+  width: 206px;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white-two;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: grid;
+  grid-gap: 10px 15px;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.view-more {
+  background: transparent;
+  border: 1px solid $br;
+  color: $br;
+}
+
+.flex {
+  display: flex;
+  gap: 0 10px;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin-bottom: 3px;
   }
 }
