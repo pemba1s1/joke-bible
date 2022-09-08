@@ -65,8 +65,10 @@
 .relative {
   position: relative; }
 
+.absolute {
+  position: absolute; }
+
 .maintitle {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -102,5 +104,27 @@
     background: url(../../assets_Homework_Front-End_01/search-copy.png) 96% no-repeat; }
     .searchbar input[type='text']:focus {
       border: none; }
+
+.footer-content {
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  letter-spacing: 1px;
+  letter-spacing: 1.5; }
+  .footer-content p {
+    font-size: 14px;
+    color: #ffffff; }
+  .footer-content button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding-left: 0;
+    border: none;
+    color: #cfb995;
+    font-size: 13px;
+    cursor: pointer; }
+    .footer-content button img {
+      margin-left: 5px; }
 
 /*# sourceMappingURL=index.css.map */

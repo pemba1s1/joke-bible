@@ -82,8 +82,10 @@ $br: #cfb995;
 .relative {
   position: relative;
 }
-.maintitle {
+.absolute {
   position: absolute;
+}
+.maintitle {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -122,6 +124,32 @@ $br: #cfb995;
     background: url(../../assets_Homework_Front-End_01/search-copy.png) 96% no-repeat;
     &:focus {
       border: none;
+    }
+  }
+}
+
+.footer-content {
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  letter-spacing: 1px;
+  letter-spacing: 1.5;
+  p {
+    font-size: 14px;
+    color: $white-two;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding-left: 0;
+    border: none;
+    color: $br;
+    font-size: 13px;
+    cursor: pointer;
+    img {
+      margin-left: 5px;
     }
   }
 }
