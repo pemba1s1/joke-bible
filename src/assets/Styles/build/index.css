@@ -62,4 +62,45 @@
   .dropdown:hover .dropdown-content {
     display: block; }
 
+.relative {
+  position: relative; }
+
+.maintitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .maintitle h1 {
+    font-size: 48px;
+    line-height: 1.5;
+    color: #cfb995;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal; }
+  .maintitle h2 {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+    letter-spacing: 1px; }
+
+.searchbar {
+  display: flex;
+  margin-top: 40px;
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 5px;
+  align-items: center; }
+  .searchbar input[type='text'] {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    background: url(../../assets_Homework_Front-End_01/search-copy.png) 96% no-repeat; }
+    .searchbar input[type='text']:focus {
+      border: none; }
+
 /*# sourceMappingURL=index.css.map */
