@@ -5,12 +5,12 @@ import SubmitArrow from '../../assets/assets_Homework_Front-End_01/path-copy-2.p
 export const Footer = () => {
   return (
     <div className="relative">
-      <img src={FooterImg}></img>
+      <img className="content-fit" src={FooterImg} alt="a"></img>
       <div className="absolute footer-content">
         <p>GOT JOKES? GET PAID</p>
         <p>FOR SUBMITTING!</p>
         <br />
-        <button>
+        <button className="btn-alt">
           SUBMIT JOKE<img src={SubmitArrow} alt="x"></img>
         </button>
       </div>

@@ -19,6 +19,9 @@ $blue: #57dbe6;
   margin: 0;
 }
 
+.bg-main {
+  background-color: #ecebe9;
+}
 .bg-red {
   background-color: $red;
 }
@@ -163,25 +166,26 @@ $blue: #57dbe6;
     font-size: 14px;
     color: $white-two;
   }
-  button {
-    display: flex;
-    align-items: center;
-    background: transparent;
-    padding-left: 0;
-    border: none;
-    color: $br;
-    font-size: 13px;
-    cursor: pointer;
-    img {
-      margin-left: 5px;
-    }
+}
+
+.btn-alt {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding-left: 0;
+  border: none;
+  color: $br;
+  font-size: 13px;
+  cursor: pointer;
+  img {
+    margin-left: 5px;
   }
 }
 
 .home {
   width: 84%;
-  margin: 0 auto;
-  border: 1px solid;
+  margin: 0px auto;
+  padding-top: 30px;
 }
 
 .btn-category {
@@ -223,13 +227,67 @@ $blue: #57dbe6;
 .tag {
   border-radius: 20px;
   font-size: 12px;
-  width: auto;
   padding: 5px 10px;
   color: $white-two;
   font-weight: 600;
+  text-align: center;
+  width: fit-content;
 }
 
 .joke-list {
   margin-top: 30px;
+}
+
+.joke-container {
+  margin-top: 20px;
+  width: 100%;
+  flex-wrap: wrap;
   display: flex;
+  gap: 30px 10px;
+  .joke-card {
+    text-decoration: none;
+    padding: 16px 10px 16px 30px;
+    width: 32.6%;
+    color: $white;
+    color: #303030;
+    border: 1px solid #ecebe9;
+    background-color: white;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+.joke-title {
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1.25;
+  margin: 0 0 6px 0px;
+  img {
+    margin-right: 4px;
+  }
+}
+.joke-content {
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: normal;
+  padding-right: 6px;
+}
+.joke-end {
+  float: right;
+  margin-top: 30px;
+  button {
+    margin-right: 10px;
+  }
+}
+
+.view-more-joke {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content-fit {
+  width: 100%;
 }

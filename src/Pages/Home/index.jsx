@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../../Components/Button';
 import ArrowDown from '../../assets/assets_Homework_Front-End_01/path-copy-7.png';
 import { Tags } from '../../Components/Tags';
+import { JokeCard } from '../../Components/JokeCard';
 
 const Home = () => {
   const colors = [
@@ -28,6 +29,39 @@ const Home = () => {
       </div>
       <div className="joke-list">
         <Tags label="Social Jokes" />
+        <div className="joke-container">
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+          <JokeCard
+            title="Lawyer Joke"
+            content="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "
+          />
+        </div>
+        <div className="view-more-joke">
+          <Button color="view-more">
+            <div className="flex">
+              View All<img src={ArrowDown} alt="down"></img>
+            </div>
+          </Button>
+        </div>
       </div>
     </div>
   );
