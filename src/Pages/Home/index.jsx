@@ -69,9 +69,9 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="btn-container">
-        {cata &&
-          cata.map(
+      {cata ? (
+        <div className="btn-container">
+          {cata.map(
             (cat, index) =>
               index < noOfCata && (
                 <Button onClick={() => onCataClick(cat, index % 7)} color={colors[index % 7]}>
@@ -79,18 +79,21 @@ const Home = () => {
                 </Button>
               ),
           )}
-        <Button color="view-more">
-          <div className="inner-view" onClick={onClickViewMoreCata}>
-            {noOfCata === 7 ? (
-              <>
-                View All<img src={ArrowDown} alt="down"></img>
-              </>
-            ) : (
-              <>View Less</>
-            )}
-          </div>
-        </Button>
-      </div>
+          <Button color="view-more">
+            <div className="inner-view" onClick={onClickViewMoreCata}>
+              {noOfCata === 7 ? (
+                <>
+                  View All<img src={ArrowDown} alt="down"></img>
+                </>
+              ) : (
+                <>View Less</>
+              )}
+            </div>
+          </Button>
+        </div>
+      ) : (
+        <Spinner />
+      )}
       <div className="joke-list">
         {tag && <Tags color={colors[tag.idx]} label={tag.tag} />}
         <div className="joke-container">
