@@ -15,10 +15,9 @@ export const SearchBar = () => {
           onChange={(e) => setSearchKey(e.target.value)}
         />
       </div>
-      {console.log(searchKey)}
       <div className={`search-list ${searchKey !== '' && searchList.length > 0 ? '' : 'display-none'}`}>
         {searchList.map((item) => (
-          <Link to={`/joke/${item.id}&0`}>
+          <Link to={`/joke/${item.id}&0`} key={item.id}>
             <img src={Lightning} alt="x"></img>
             {item.categories.length > 0 && item.categories[0]} Joke
           </Link>

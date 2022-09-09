@@ -12,7 +12,6 @@ export const SearchProvider = ({ children }) => {
         axios.get(`https://api.chucknorris.io/jokes/search?query=${searchKey}`).then((response) => {
           let tempData = response.data.result.splice(0, 6);
           setSearchList(tempData);
-          console.log(response);
         });
       } else {
         setSearchList([]);

@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
       <div className="navmenu-mobile">
         <button className="hamburgur" onClick={() => setShowMobNav(!showMobNav)}>
-          <i class="fa fa-bars"></i>
+          <i className="fa fa-bars"></i>
         </button>
         <div className={`navmenuitem-mobile ${showMobNav && 'toggle-mob-nav'}`}>
           <NavLink to="#">SO FUNKTIONIERT'S</NavLink>

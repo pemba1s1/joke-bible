@@ -55,7 +55,6 @@ const Home = () => {
 
   const onCataClick = (val, idx) => {
     setTag({ tag: val, idx });
-    console.log(val);
   };
 
   return (
@@ -65,7 +64,7 @@ const Home = () => {
           {cata.map(
             (cat, index) =>
               index < noOfCata && (
-                <Button onClick={() => onCataClick(cat, index % 7)} color={colors[index % 7]}>
+                <Button key={index} onClick={() => onCataClick(cat, index % 7)} color={colors[index % 7]}>
                   {cat}
                 </Button>
               ),

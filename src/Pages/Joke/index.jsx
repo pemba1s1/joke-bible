@@ -37,11 +37,9 @@ const Joke = () => {
     while (i < 10) {
       await axios.get('https://api.chucknorris.io/jokes/random').then((res) => {
         tempTen.push(res.data);
-        console.log(res);
       });
       i = i + 1;
     }
-    console.log(tempTen);
     setTopTen(tempTen);
   };
 
@@ -126,13 +124,13 @@ const Joke = () => {
         <div className="top-jokes">
           <h1>The Top 10 Jokes This Week</h1>
           {topTen ? (
-            topTen.map((top) => (
-              <ul>
-                <li>
+            <ul>
+              {topTen.map((top) => (
+                <li key={top.id}>
                   <Link to={`/joke/${top.id}&0`}>{top.categories[0]} Joke</Link>
                 </li>
-              </ul>
-            ))
+              ))}
+            </ul>
           ) : (
             <Spinner />
           )}
