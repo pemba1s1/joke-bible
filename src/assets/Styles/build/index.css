@@ -168,7 +168,7 @@
 .banner {
   height: 200px; }
   .banner img {
-    height: 300px;
+    height: 100%;
     object-fit: cover; }
   @media screen and (min-width: 800px) {
     .banner {
@@ -283,8 +283,10 @@
   text-align: center;
   color: #ffffff;
   padding: 10px 0;
-  border: none;
+  border: 0.5px solid transparent;
   cursor: pointer; }
+  .btn-category:hover {
+    border: 0.5px solid black; }
 
 .btn-container {
   justify-content: center;
@@ -447,9 +449,11 @@
 .like-btn {
   border-radius: 50%;
   border: none;
-  background-color: green;
+  background-color: #09aa09;
   padding: 8px;
   cursor: pointer; }
+  .like-btn:hover {
+    background-color: green; }
 
 .dislike-btn {
   border-radius: 50%;
@@ -457,6 +461,8 @@
   background-color: red;
   padding: 8px;
   cursor: pointer; }
+  .dislike-btn:hover {
+    background-color: #aa0606; }
 
 .nav-btn {
   display: flex;
@@ -475,6 +481,8 @@
     justify-content: center;
     align-items: center;
     gap: 5px; }
+    .nav-btn button:hover {
+      color: #eebc6c; }
 
 .center {
   text-align: center; }
