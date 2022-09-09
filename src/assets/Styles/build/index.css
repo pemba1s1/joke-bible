@@ -383,7 +383,10 @@
   margin-top: 30px; }
 
 .col-1 {
-  width: 65%; }
+  width: 100%; }
+  @media screen and (min-width: 765px) {
+    .col-1 {
+      width: 65%; } }
 
 .joke-detail {
   background-color: #ffffff;
@@ -396,13 +399,17 @@
   width: 30%;
   background-color: #ffffff;
   padding: 30px 20px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: none; }
   .top-jokes h1 {
     font-size: 15px;
     margin-bottom: 10px; }
   .top-jokes a {
     font-size: 13px;
     color: black; }
+  @media screen and (min-width: 765px) {
+    .top-jokes {
+      display: block; } }
 
 .joke-desc {
   margin-top: 10px; }
@@ -429,6 +436,14 @@
 .gap-20 {
   gap: 20px; }
 
+.joke-desc-btm-btn {
+  flex-wrap: wrap; }
+  .joke-desc-btm-btn div {
+    width: 100%; }
+  @media screen and (min-width: 500px) {
+    .joke-desc-btm-btn div {
+      width: auto; } }
+
 .like-btn {
   border-radius: 50%;
   border: none;
@@ -446,7 +461,9 @@
 .nav-btn {
   display: flex;
   align-items: flex-end;
-  gap: 5px; }
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 10px; }
   .nav-btn button {
     background-color: #f9f9f9;
     border: none;

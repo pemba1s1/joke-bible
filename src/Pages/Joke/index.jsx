@@ -97,7 +97,7 @@ const Joke = () => {
           ) : (
             <Spinner />
           )}
-          <div className="flex space-between">
+          <div className="flex space-between joke-desc-btm-btn">
             <div className="flex gap-20">
               <div className="center">
                 <button className="like-btn" onClick={incrementLike}>
