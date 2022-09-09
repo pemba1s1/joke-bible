@@ -42,7 +42,10 @@
   justify-content: end;
   align-items: center;
   width: 100%;
-  margin: 0px 64px 0px 0px; }
+  margin: 0px 0px 0px 0px; }
+  @media screen and (min-width: 1000px) {
+    .navmenu {
+      margin-right: 64px; } }
 
 .navmenuitem {
   width: auto;
@@ -104,6 +107,15 @@
     .dropdown .dropdown-content .submenuitems:hover {
       color: #cfb995; }
 
+.banner {
+  height: 200px; }
+  .banner img {
+    height: 100%;
+    object-fit: cover; }
+  @media screen and (min-width: 800px) {
+    .banner {
+      height: auto; } }
+
 .relative {
   position: relative; }
 
@@ -116,7 +128,7 @@
   transform: translate(-50%, -50%);
   text-align: center; }
   .maintitle h1 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.5;
     color: #cfb995;
     font-weight: normal;
@@ -124,15 +136,20 @@
     font-style: normal;
     letter-spacing: normal; }
   .maintitle h2 {
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 1.5;
     letter-spacing: 1px; }
+  @media screen and (min-width: 800px) {
+    .maintitle h1 {
+      font-size: 48px; }
+    .maintitle h2 {
+      font-size: 20px; } }
 
 .searchbar {
   display: flex;
-  margin-top: 40px;
-  width: 400px;
+  margin-top: 20px;
+  width: 350px;
   border: 1px solid white;
   border-radius: 5px;
   align-items: center; }
@@ -146,10 +163,17 @@
     background: url(../../assets_Homework_Front-End_01/search-copy.png) 96% no-repeat; }
     .searchbar input[type='text']:focus {
       border: none; }
+  @media screen and (min-width: 1000px) {
+    .searchbar {
+      margin-top: 40px;
+      width: 400px; }
+      .searchbar input {
+        font-size: 12px;
+        padding: 8px; } }
 
 .footer-content {
   top: 50%;
-  left: 15%;
+  left: 30%;
   transform: translate(-50%, -50%);
   font-weight: bold;
   letter-spacing: 1px;
@@ -157,6 +181,12 @@
   .footer-content p {
     font-size: 14px;
     color: #ffffff; }
+  @media screen and (min-width: 450px) {
+    .footer-content {
+      left: 25%; } }
+  @media screen and (min-width: 800px) {
+    .footer-content {
+      left: 15%; } }
 
 .btn-alt {
   display: flex;
@@ -199,9 +229,12 @@
   cursor: pointer; }
 
 .btn-container {
-  display: grid;
-  grid-gap: 10px 15px;
-  grid-template-columns: auto auto auto auto auto; }
+  justify-content: center;
+  display: flex;
+  gap: 10px 15px;
+  flex-wrap: wrap; }
+  .btn-container gap div {
+    width: 20%; }
 
 .view-more {
   background: transparent;
@@ -235,18 +268,25 @@
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-between;
   gap: 30px 10px; }
   .joke-container .joke-card {
     text-decoration: none;
     padding: 16px 10px 16px 30px;
-    width: 32.6%;
     color: #f9f9f9;
     color: #303030;
+    width: 100%;
     border: 1px solid #ecebe9;
     background-color: white;
     cursor: pointer; }
     .joke-container .joke-card:hover {
       box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15); }
+    @media screen and (min-width: 500px) {
+      .joke-container .joke-card {
+        width: 48%; } }
+    @media screen and (min-width: 1000px) {
+      .joke-container .joke-card {
+        width: 32%; } }
 
 .joke-title {
   font-size: 16px;

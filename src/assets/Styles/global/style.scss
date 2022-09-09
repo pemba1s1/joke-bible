@@ -55,7 +55,10 @@ $blue: #57dbe6;
   justify-content: end;
   align-items: center;
   width: 100%;
-  margin: 0px 64px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  @media screen and(min-width:1000px) {
+    margin-right: 64px;
+  }
 }
 .navmenuitem {
   width: auto;
@@ -124,6 +127,17 @@ $blue: #57dbe6;
     }
   }
 }
+
+.banner {
+  height: 200px;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and(min-width:800px) {
+    height: auto;
+  }
+}
 .relative {
   position: relative;
 }
@@ -136,7 +150,7 @@ $blue: #57dbe6;
   transform: translate(-50%, -50%);
   text-align: center;
   h1 {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.5;
     color: $br;
     font-weight: normal;
@@ -145,17 +159,25 @@ $blue: #57dbe6;
     letter-spacing: normal;
   }
   h2 {
-    font-size: 20px;
+    font-size: 16px;
     color: $white-two;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+  @media screen and(min-width:800px) {
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 20px;
+    }
   }
 }
 
 .searchbar {
   display: flex;
-  margin-top: 40px;
-  width: 400px;
+  margin-top: 20px;
+  width: 350px;
   border: 1px solid white;
   border-radius: 5px;
   align-items: center;
@@ -171,11 +193,19 @@ $blue: #57dbe6;
       border: none;
     }
   }
+  @media screen and(min-width:1000px) {
+    margin-top: 40px;
+    width: 400px;
+    input {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
 }
 
 .footer-content {
   top: 50%;
-  left: 15%;
+  left: 30%;
   transform: translate(-50%, -50%);
   font-weight: bold;
   letter-spacing: 1px;
@@ -183,6 +213,12 @@ $blue: #57dbe6;
   p {
     font-size: 14px;
     color: $white-two;
+  }
+  @media screen and(min-width:450px) {
+    left: 25%;
+  }
+  @media screen and(min-width:800px) {
+    left: 15%;
   }
 }
 
@@ -232,9 +268,13 @@ $blue: #57dbe6;
 }
 
 .btn-container {
-  display: grid;
-  grid-gap: 10px 15px;
-  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+  display: flex;
+  gap: 10px 15px;
+  flex-wrap: wrap;
+  gap div {
+    width: 20%;
+  }
 }
 
 .view-more {
@@ -274,18 +314,25 @@ $blue: #57dbe6;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-between;
   gap: 30px 10px;
   .joke-card {
     text-decoration: none;
     padding: 16px 10px 16px 30px;
-    width: 32.6%;
     color: $white;
     color: #303030;
+    width: 100%;
     border: 1px solid #ecebe9;
     background-color: white;
     cursor: pointer;
     &:hover {
       box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
+    }
+    @media screen and (min-width: 500px) {
+      width: 48%;
+    }
+    @media screen and (min-width: 1000px) {
+      width: 32%;
     }
   }
 }

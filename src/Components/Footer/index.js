@@ -4,7 +4,7 @@ import SubmitArrow from '../../assets/assets_Homework_Front-End_01/path-copy-2.p
 
 export const Footer = () => {
   return (
-    <div className="relative">
+    <div className="relative banner">
       <img className="content-fit" src={FooterImg} alt="a"></img>
       <div className="absolute footer-content">
         <p>GOT JOKES? GET PAID</p>
