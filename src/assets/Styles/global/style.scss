@@ -194,11 +194,11 @@ $blue: #57dbe6;
 .banner {
   height: 200px;
   img {
-    height: 100%;
+    height: 300px;
     object-fit: cover;
   }
   @media screen and(min-width:800px) {
-    height: auto;
+    height: 300px;
   }
 }
 .relative {
