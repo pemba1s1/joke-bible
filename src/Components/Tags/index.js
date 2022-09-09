@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Tags = ({ label }) => {
+export const Tags = ({ label, color }) => {
   return (
     <div>
-      <div className="tag bg-weirdgreen">{label}</div>
+      <div className={`tag ` + color}>{label}</div>
     </div>
   );
 };
