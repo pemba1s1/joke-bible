@@ -312,13 +312,21 @@
     margin-bottom: 10px;
     color: #cfb995; }
 
-.orange {
-  color: #ffbe5b;
+.label, .orange, .blue, .red {
   font-weight: 600;
   font-size: 15px; }
-  .orange:before {
+  .label:before, .orange:before, .blue:before, .red:before {
     content: '•';
     margin-right: 5px; }
+
+.orange {
+  color: #ffbe5b; }
+
+.blue {
+  color: #57dbe6; }
+
+.red {
+  color: #ff5b5b; }
 
 .gap-20 {
   gap: 20px; }
@@ -412,10 +420,12 @@ ul {
   .search-list a {
     display: block;
     text-decoration: none;
-    padding: 15px 15px;
+    padding: 15px 0px;
     border-bottom: 0.5px solid #e0d5d5;
     margin: 0 10px;
     color: inherit; }
+    .search-list a img {
+      margin-right: 15px; }
   .search-list:after {
     content: '';
     position: absolute;

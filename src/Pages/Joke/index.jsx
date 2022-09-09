@@ -9,6 +9,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../../Components/Spinner';
 import { colors } from '../../Constants/colors';
+import { Label } from '../../Components/Label';
 
 const Joke = () => {
   let [like, setLike] = useState(0);
@@ -19,6 +20,8 @@ const Joke = () => {
   let [topTen, setTopTen] = useState(null);
 
   useEffect(() => {
+    setDislike(0);
+    setLike(0);
     axios.get(`https://api.chucknorris.io/jokes/${param.id}`).then((res) => {
       setJoke(res.data);
     });
@@ -56,6 +59,8 @@ const Joke = () => {
   };
 
   const getNextJoke = async (category) => {
+    setDislike(0);
+    setLike(0);
     if (category) {
       await axios.get(`https://api.chucknorris.io/jokes/random?category=${category}`).then((res) => {
         setJoke(res.data);
@@ -82,7 +87,7 @@ const Joke = () => {
                   label={`${joke.categories.length > 0 ? joke.categories[0] : ''} Joke`}
                   color={colors[param.colorIdx]}
                 />
-                <p className="orange">Trending</p>
+                <Label like={like} />
               </div>
               <div className="joke-desc">
                 <h1>{joke.categories[0]} joke</h1>

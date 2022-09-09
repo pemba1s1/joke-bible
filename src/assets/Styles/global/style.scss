@@ -367,8 +367,7 @@ $blue: #57dbe6;
     color: $br;
   }
 }
-.orange {
-  color: $pale-orange;
+.label {
   font-weight: 600;
   font-size: 15px;
   &:before {
@@ -376,6 +375,22 @@ $blue: #57dbe6;
     margin-right: 5px;
   }
 }
+
+.orange {
+  @extend .label;
+  color: $pale-orange;
+}
+
+.blue {
+  @extend .label;
+  color: #57dbe6;
+}
+
+.red {
+  @extend .label;
+  color: #ff5b5b;
+}
+
 .gap-20 {
   gap: 20px;
 }
@@ -479,10 +494,13 @@ ul {
   a {
     display: block;
     text-decoration: none;
-    padding: 15px 15px;
+    padding: 15px 0px;
     border-bottom: 0.5px solid #e0d5d5;
     margin: 0 10px;
     color: inherit;
+    img {
+      margin-right: 15px;
+    }
   }
 
   &:after {
