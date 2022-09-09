@@ -445,3 +445,37 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.display-none {
+  display: none;
+}
+
+.search-list {
+  position: absolute;
+  top: 60px;
+  background-color: $white-two;
+  color: #5e5e5e;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 15px;
+    border-bottom: 0.5px solid #e0d5d5;
+    margin: 0 10px;
+    color: inherit;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid $white-two;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}

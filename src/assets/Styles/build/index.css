@@ -381,5 +381,33 @@ ul {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.display-none {
+  display: none; }
+
+.search-list {
+  position: absolute;
+  top: 60px;
+  background-color: #ffffff;
+  color: #5e5e5e;
+  width: 100%;
+  font-size: 14px;
+  text-align: left; }
+  .search-list a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 15px;
+    border-bottom: 0.5px solid #e0d5d5;
+    margin: 0 10px;
+    color: inherit; }
+  .search-list:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #ffffff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; }
 
 /*# sourceMappingURL=index.css.map */
