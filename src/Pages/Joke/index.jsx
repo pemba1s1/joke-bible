@@ -1,16 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tags } from '../../Components/Tags';
 import ArrowLeft from '../../assets/assets_Homework_Front-End_02/arrow-left-copy-2.png';
 import ArrowRight from '../../assets/assets_Homework_Front-End_02/arrow-left-copy.png';
 import Like from '../../assets/assets_Homework_Front-End_02/hand.png';
 import Dislike from '../../assets/assets_Homework_Front-End_02/hand-copy.png';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
+import Spinner from '../../Components/Spinner';
+import { colors } from '../../Constants/colors';
 
 const Joke = () => {
   let [like, setLike] = useState(0);
   let [dislike, setDislike] = useState(0);
   let navigate = useNavigate();
+  let param = useParams();
+  let [joke, setJoke] = useState(null);
+  let [topTen, setTopTen] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://api.chucknorris.io/jokes/${param.id}`).then((res) => {
+      setJoke(res.data);
+    });
+  }, [param.id]);
+
+  useEffect(() => {
+    fetchTopTen();
+  }, []);
+
+  const fetchTopTen = async () => {
+    let tempTen = [];
+    let i = 0;
+    while (i < 10) {
+      await axios.get('https://api.chucknorris.io/jokes/random').then((res) => {
+        tempTen.push(res.data);
+        console.log(res);
+      });
+      i = i + 1;
+    }
+    console.log(tempTen);
+    setTopTen(tempTen);
+  };
 
   const incrementLike = () => {
     setLike(like + 1);
@@ -24,6 +54,18 @@ const Joke = () => {
   const decrementDislike = () => {
     setDislike(dislike--);
   };
+
+  const getNextJoke = async (category) => {
+    if (category) {
+      await axios.get(`https://api.chucknorris.io/jokes/random?category=${category}`).then((res) => {
+        setJoke(res.data);
+      });
+    } else {
+      await axios.get(`https://api.chucknorris.io/jokes/random`).then((res) => {
+        setJoke(res.data);
+      });
+    }
+  };
   return (
     <div className="home">
       <div>
@@ -33,19 +75,23 @@ const Joke = () => {
       </div>
       <div className="joke-page-content">
         <div className="col-1">
-          <div className="joke-detail">
-            <div className="flex space-between">
-              <Tags label="Social Jokes" />
-              <p className="orange">Trending</p>
+          {joke ? (
+            <div className="joke-detail">
+              <div className="flex space-between">
+                <Tags
+                  label={`${joke.categories.length > 0 ? joke.categories[0] : ''} Joke`}
+                  color={colors[param.colorIdx]}
+                />
+                <p className="orange">Trending</p>
+              </div>
+              <div className="joke-desc">
+                <h1>{joke.categories[0]} joke</h1>
+                <p>{joke.value}</p>
+              </div>
             </div>
-            <div className="joke-desc">
-              <h1>The Granny Joke</h1>
-              <p>
-                lorem lorem lorem v v v lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem
-                lorem lorem
-              </p>
-            </div>
-          </div>
+          ) : (
+            <Spinner />
+          )}
           <div className="flex space-between">
             <div className="flex gap-20">
               <div className="center">
@@ -62,10 +108,10 @@ const Joke = () => {
               </div>
             </div>
             <div className="nav-btn">
-              <button>
+              <button onClick={() => getNextJoke(joke && joke.categories.length > 0 && joke.categories[0])}>
                 <img src={ArrowLeft} alt="A"></img>PREV. JOKE
               </button>
-              <button>
+              <button onClick={() => getNextJoke(joke && joke.categories.length > 0 && joke.categories[0])}>
                 NEXT JOKE
                 <img src={ArrowRight} alt="A"></img>
               </button>
@@ -74,46 +120,17 @@ const Joke = () => {
         </div>
         <div className="top-jokes">
           <h1>The Top 10 Jokes This Week</h1>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link to="#">Smoking Joke</Link>
-            </li>
-          </ul>
+          {topTen ? (
+            topTen.map((top) => (
+              <ul>
+                <li>
+                  <Link to={`/joke/${top.id}&0`}>{top.categories[0]} Joke</Link>
+                </li>
+              </ul>
+            ))
+          ) : (
+            <Spinner />
+          )}
         </div>
       </div>
     </div>

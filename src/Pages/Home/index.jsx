@@ -5,6 +5,7 @@ import { Tags } from '../../Components/Tags';
 import { JokeCard } from '../../Components/JokeCard';
 import axios from 'axios';
 import Spinner from '../../Components/Spinner';
+import { colors } from '../../Constants/colors';
 
 const Home = () => {
   const [cata, setCata] = useState(null);
@@ -52,16 +53,6 @@ const Home = () => {
     }
   };
 
-  const colors = [
-    'bg-red',
-    'bg-paleorange',
-    'bg-pastelorange',
-    'bg-lightgold',
-    'bg-kiwigreen',
-    'bg-weirdgreen',
-    'bg-blue',
-  ];
-
   const onCataClick = (val, idx) => {
     setTag({ tag: val, idx });
     console.log(val);
@@ -98,7 +89,7 @@ const Home = () => {
         {tag && <Tags color={colors[tag.idx]} label={tag.tag} />}
         <div className="joke-container">
           {jokes && jokes.length >= 6 ? (
-            jokes.map((joke) => <JokeCard title={`${tag.tag} Joke`} content={joke.value} />)
+            jokes.map((joke) => <JokeCard colorIdx={tag.idx} title={`${tag.tag} Joke`} joke={joke} />)
           ) : (
             <Spinner />
           )}

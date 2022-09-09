@@ -7,7 +7,7 @@ export const Router = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/joke/:id" element={<Joke />} />
+      <Route path="/joke/:id&:colorIdx" element={<Joke />} />
     </Routes>
   );
 };
