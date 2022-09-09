@@ -22,7 +22,7 @@ const Home = () => {
           <Button color={colors[index]}>{cat}</Button>
         ))}
         <Button color="view-more">
-          <div className="flex">
+          <div className="inner-view">
             View All<img src={ArrowDown} alt="down"></img>
           </div>
         </Button>
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
         <div className="view-more-joke">
           <Button color="view-more">
-            <div className="flex">
+            <div className="inner-view">
               View All<img src={ArrowDown} alt="down"></img>
             </div>
           </Button>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Montserrat;
   src: url(../../Montserrat/Montserrat-Regular.ttf); }
@@ -152,10 +153,20 @@
   .btn-alt img {
     margin-left: 5px; }
 
+.back-btn {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  clip-path: polygon(50% 5%, 83% 12%, 96% 44%, 78% 80%, 52% 90%, 32% 100%, 16% 75%, 4% 46%, 10% 10%); }
+
 .home {
   width: 84%;
   margin: 0px auto;
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-bottom: 40px; }
 
 .btn-category {
   width: 206px;
@@ -180,12 +191,14 @@
   border: 1px solid #cfb995;
   color: #cfb995; }
 
-.flex {
-  display: flex;
+.flex, .inner-view, .joke-page-content {
+  display: flex; }
+
+.inner-view {
   gap: 0 10px;
   justify-content: center;
   align-items: center; }
-  .flex img {
+  .inner-view img {
     margin-bottom: 3px; }
 
 .tag {
@@ -240,11 +253,97 @@
     margin-right: 10px; }
 
 .view-more-joke {
-  padding: 40px 0;
+  padding-top: 40px;
   display: flex;
   justify-content: center; }
 
 .content-fit {
   width: 100%; }
+
+.space-between {
+  justify-content: space-between; }
+
+.joke-page-content {
+  justify-content: space-between;
+  margin-top: 30px; }
+
+.col-1 {
+  width: 65%; }
+
+.joke-detail {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 20px; }
+
+.top-jokes {
+  width: 30%;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 3px; }
+  .top-jokes h1 {
+    font-size: 15px;
+    margin-bottom: 10px; }
+  .top-jokes a {
+    font-size: 13px;
+    color: black; }
+
+.joke-desc {
+  margin-top: 10px; }
+  .joke-desc h1 {
+    margin-bottom: 10px;
+    color: #cfb995; }
+
+.orange {
+  color: #ffbe5b;
+  font-weight: 600;
+  font-size: 15px; }
+  .orange:before {
+    content: '•';
+    margin-right: 5px; }
+
+.gap-20 {
+  gap: 20px; }
+
+.like-btn {
+  border-radius: 50%;
+  border: none;
+  background-color: green;
+  padding: 8px;
+  cursor: pointer; }
+
+.dislike-btn {
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  padding: 8px;
+  cursor: pointer; }
+
+.nav-btn {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px; }
+  .nav-btn button {
+    background-color: #f9f9f9;
+    border: none;
+    height: 40px;
+    padding: 2px 20px;
+    cursor: pointer;
+    color: #cfb995;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; }
+
+.center {
+  text-align: center; }
+  .center p {
+    margin-top: 3px; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+  ul li {
+    margin-bottom: 5px; }
 
 /*# sourceMappingURL=index.css.map */
