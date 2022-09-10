@@ -203,6 +203,14 @@ $white-three: #ecebe9;
     height: 300px;
   }
 }
+
+.footer-banner {
+  @extend .banner;
+  @media screen and(min-width:800px) {
+    height: auto !important;
+  }
+}
+
 .relative {
   position: relative;
 }
