@@ -88,7 +88,9 @@ const Home = () => {
         {tag && <Tags color={colors[tag.idx]} label={tag.tag} />}
         <div className="joke-container">
           {jokes && jokes.length >= 6 ? (
-            jokes.map((joke) => <JokeCard colorIdx={tag.idx} title={`${tag.tag} Joke`} joke={joke} />)
+            jokes.map((joke, index) => (
+              <JokeCard key={joke.id + index} colorIdx={tag.idx} title={`${tag.tag} Joke`} joke={joke} />
+            ))
           ) : (
             <Spinner />
           )}
