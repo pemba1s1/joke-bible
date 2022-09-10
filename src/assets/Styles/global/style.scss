@@ -8,6 +8,8 @@ $light-gold: #ffdf5b;
 $br: #cfb995;
 $red: #ff5b5b;
 $blue: #57dbe6;
+$black: #303030;
+$white-three: #ecebe9;
 
 @font-face {
   font-family: Montserrat;
@@ -20,7 +22,7 @@ $blue: #57dbe6;
 }
 
 .bg-main {
-  background-color: #ecebe9;
+  background-color: $white-three;
 }
 .bg-red {
   background-color: $red;
@@ -45,7 +47,7 @@ $blue: #57dbe6;
 }
 
 .navcontainer {
-  background-color: #303030;
+  background-color: $black;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -63,7 +65,7 @@ $blue: #57dbe6;
   z-index: 99;
   padding-right: 10px;
   position: fixed;
-  background-color: #303030;
+  background-color: $black;
   top: 0;
   .hamburgur {
     border: none;
@@ -79,7 +81,7 @@ $blue: #57dbe6;
   width: 80% !important;
 }
 .navmenuitem-mobile {
-  background-color: #303030;
+  background-color: $black;
   display: flex;
   flex-direction: column;
   color: white;
@@ -386,9 +388,9 @@ $blue: #57dbe6;
     text-decoration: none;
     padding: 16px 10px 16px 30px;
     color: $white;
-    color: #303030;
+    color: $black;
     width: 100%;
-    border: 1px solid #ecebe9;
+    border: 1px solid $white-three;
     background-color: white;
     cursor: pointer;
     &:hover {
